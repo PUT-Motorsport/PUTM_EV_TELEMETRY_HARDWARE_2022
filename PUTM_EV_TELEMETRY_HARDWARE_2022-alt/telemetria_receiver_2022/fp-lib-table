@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name FOOTPRINTS)(type KiCad)(uri C:/Users/48730/Downloads/PUTM_Kicad_Library-main/PUTM_Kicad_Library-main/FOOTPRINTS.pretty)(options "")(descr ""))
+  (lib (name Logos)(type KiCad)(uri C:/Users/Jan/Desktop/PUTM_EV_TELEMETRY_HARDWARE_2022-main/PUTM_EV_TELEMETRY_HARDWARE_2022-alt/telemetria_receiver_2022/Logos.pretty)(options "")(descr ""))
+)
