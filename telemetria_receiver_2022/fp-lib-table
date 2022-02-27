@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name FOOTPRINTS)(type KiCad)(uri C:/Users/48730/Downloads/PUTM_Kicad_Library-main/PUTM_Kicad_Library-main/FOOTPRINTS.pretty)(options "")(descr ""))
   (lib (name Logos)(type KiCad)(uri C:/Users/48730/Downloads/PUTM_Kicad_Library-main/PUTM_Kicad_Library-main/FOOTPRINTS/Logos.pretty)(options "")(descr ""))
+  (lib (name Logos_fix)(type KiCad)(uri ${KIPRJMOD}/Logos_fix.pretty)(options "")(descr ""))
 )

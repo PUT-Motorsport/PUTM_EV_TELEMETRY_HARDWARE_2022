@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:telemetria_receiver_2022-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1546,7 +1547,7 @@ Wire Notes Line
 Wire Notes Line
 	4850 5150 5000 5150
 $Comp
-L PUTM_KICAD_SYMBOLS:Ferrite_Bead_Small_PWR FB?
+L telemetria_receiver_2022-rescue:Ferrite_Bead_Small_PWR-PUTM_KICAD_SYMBOLS FB?
 U 1 1 61BAD549
 P 2350 3850
 AR Path="/61A064B3/61BAD549" Ref="FB?"  Part="1" 
@@ -1561,7 +1562,7 @@ F 3 "~" H 2350 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PUTM_KICAD_SYMBOLS:Ferrite_Bead_Small_PWR FB?
+L telemetria_receiver_2022-rescue:Ferrite_Bead_Small_PWR-PUTM_KICAD_SYMBOLS FB?
 U 1 1 61BAD9FD
 P 4300 3850
 AR Path="/61A064B3/61BAD9FD" Ref="FB?"  Part="1" 

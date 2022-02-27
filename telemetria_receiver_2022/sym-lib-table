@@ -14,4 +14,5 @@
   (lib (name "SR17A1815F89N_(Przełącznik_wieloobrotowy)")(type Legacy)(uri "C:/Users/48730/Downloads/PUTM_Kicad_Library-main/PUTM_Kicad_Library-main/SYMBOLS/SR17A1815F89N (Przełącznik wieloobrotowy).lib")(options "")(descr ""))
   (lib (name STM32L4P5RET6)(type Legacy)(uri C:/Users/48730/Downloads/PUTM_Kicad_Library-main/PUTM_Kicad_Library-main/SYMBOLS/STM32L4P5RET6.lib)(options "")(descr ""))
   (lib (name VN9D30Q100F)(type Legacy)(uri C:/Users/48730/Downloads/PUTM_Kicad_Library-main/PUTM_Kicad_Library-main/SYMBOLS/VN9D30Q100F.lib)(options "")(descr ""))
+  (lib (name telemetria_receiver_2022-rescue)(type Legacy)(uri ${KIPRJMOD}/telemetria_receiver_2022-rescue.lib)(options "")(descr ""))
 )
