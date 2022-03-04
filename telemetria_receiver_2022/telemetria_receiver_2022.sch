@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:telemetria_receiver_2022-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1405,4 +1405,58 @@ F 3 "~" H 3400 1500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3400 1500 3450 1500
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6224147F
+P 9550 4450
+F 0 "H1" H 9650 4496 50  0000 L CNN
+F 1 "MountingHole" H 9650 4405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 9550 4450 50  0001 C CNN
+F 3 "~" H 9550 4450 50  0001 C CNN
+	1    9550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 62242341
+P 9550 4750
+F 0 "H2" H 9650 4796 50  0000 L CNN
+F 1 "MountingHole" H 9650 4705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 9550 4750 50  0001 C CNN
+F 3 "~" H 9550 4750 50  0001 C CNN
+	1    9550 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 622500A4
+P 10300 4450
+F 0 "H3" H 10400 4496 50  0000 L CNN
+F 1 "MountingHole" H 10400 4405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 10300 4450 50  0001 C CNN
+F 3 "~" H 10300 4450 50  0001 C CNN
+	1    10300 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6225D50E
+P 10300 4750
+F 0 "H4" H 10400 4796 50  0000 L CNN
+F 1 "MountingHole" H 10400 4705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 10300 4750 50  0001 C CNN
+F 3 "~" H 10300 4750 50  0001 C CNN
+	1    10300 4750
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	9050 4000 9050 5200
+Wire Notes Line
+	9050 5200 11150 5200
+Wire Notes Line
+	11150 5200 11150 4050
+Wire Notes Line
+	11150 4050 9050 4050
+Text Notes 9800 4200 0    50   ~ 0
+mounting holes\n
 $EndSCHEMATC

@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:telemetria_receiver_2022-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -45,21 +46,6 @@ F 3 "~" H 2450 1900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2450 2050 2450 2650
-Wire Wire Line
-	2400 4300 2450 4300
-$Comp
-L Device:R R3
-U 1 1 61AB7856
-P 2450 4000
-F 0 "R3" H 2250 4050 50  0000 L CNN
-F 1 "10kR" H 2200 3950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 4000 50  0001 C CNN
-F 3 "~" H 2450 4000 50  0001 C CNN
-	1    2450 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 4300 2450 4150
 $Comp
 L power:GND #PWR031
 U 1 1 61AC0A90
@@ -71,10 +57,6 @@ F 3 "" H 3450 2050 50  0001 C CNN
 	1    3450 2050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9650 4550 9600 4550
-Text Notes 1200 3300 0    91   ~ 0
-Real-Time Clock
 Wire Wire Line
 	9500 1850 9850 1850
 Wire Wire Line
@@ -387,7 +369,7 @@ F 3 "~" H 10350 1350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:USB_B_Mini J4
+L telemetria_receiver_2022-rescue:USB_B_Mini-Connector J4
 U 1 1 61AC4E33
 P 10900 1250
 F 0 "J4" H 10957 1717 50  0000 C CNN
@@ -430,7 +412,7 @@ U 1 1 61C47E1A
 P 10150 3150
 F 0 "U4" H 10150 3392 50  0000 C CNN
 F 1 "LM1117-3.3" H 10150 3301 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 10150 3150 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 10150 3150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 10150 3150 50  0001 C CNN
 	1    10150 3150
 	1    0    0    -1  
@@ -559,23 +541,6 @@ Wire Notes Line
 Text Notes 10650 3850 0    91   ~ 0
 Power
 $Comp
-L Device:R R1
-U 1 1 61ABE394
-P 1050 4000
-F 0 "R1" H 800 4050 50  0000 L CNN
-F 1 "4.7kR" H 750 3950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 980 4000 50  0001 C CNN
-F 3 "~" H 1050 4000 50  0001 C CNN
-	1    1050 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1050 3850 1050 3700
-Text Label 650  4400 0    50   ~ 0
-I2C1_SDA
-Text Label 650  4300 0    50   ~ 0
-I2C1_SCL
-$Comp
 L power:GND #PWR03
 U 1 1 61AAA575
 P 1700 2750
@@ -638,117 +603,6 @@ Wire Wire Line
 	3900 1900 3900 2000
 Wire Wire Line
 	3450 1900 3450 2050
-Text Notes 9450 4150 0    91   ~ 0
-RTC Supply / Battery 
-$Comp
-L Device:Ferrite_Bead_Small FB1
-U 1 1 61DC5F7C
-P 9750 4550
-F 0 "FB1" V 9600 4500 50  0000 L CNN
-F 1 "100R@100MHz" V 9500 4250 50  0000 L CNN
-F 2 "Inductor_SMD:L_0603_1608Metric" V 9680 4550 50  0001 C CNN
-F 3 "~" H 9750 4550 50  0001 C CNN
-	1    9750 4550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR021
-U 1 1 61DCDF5F
-P 10600 4550
-F 0 "#PWR021" H 10600 4300 50  0001 C CNN
-F 1 "GND" H 10605 4377 50  0000 C CNN
-F 2 "" H 10600 4550 50  0001 C CNN
-F 3 "" H 10600 4550 50  0001 C CNN
-	1    10600 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C12
-U 1 1 61DCDF65
-P 10350 4550
-F 0 "C12" V 10100 4450 50  0000 L CNN
-F 1 "100nF" V 10200 4450 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10350 4550 50  0001 C CNN
-F 3 "~" H 10350 4550 50  0001 C CNN
-	1    10350 4550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9850 4550 10200 4550
-Wire Wire Line
-	10450 4550 10600 4550
-Text Label 10200 4550 2    50   ~ 0
-+VCC_RTC
-$Comp
-L power:+3.3V #PWR020
-U 1 1 61DEAF30
-P 9600 4550
-F 0 "#PWR020" H 9600 4400 50  0001 C CNN
-F 1 "+3.3V" H 9615 4723 50  0000 C CNN
-F 2 "" H 9600 4550 50  0001 C CNN
-F 3 "" H 9600 4550 50  0001 C CNN
-	1    9600 4550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	650  4400 1050 4400
-Wire Wire Line
-	1050 4150 1050 4400
-$Comp
-L power:+3.3V #PWR01
-U 1 1 61E0EF50
-P 1200 3650
-F 0 "#PWR01" H 1200 3500 50  0001 C CNN
-F 1 "+3.3V" H 1215 3823 50  0000 C CNN
-F 2 "" H 1200 3650 50  0001 C CNN
-F 3 "" H 1200 3650 50  0001 C CNN
-	1    1200 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 3650 1200 3700
-Wire Wire Line
-	1050 3700 1200 3700
-Wire Wire Line
-	1200 3700 1350 3700
-Connection ~ 1200 3700
-Wire Wire Line
-	2750 3850 2750 3700
-$Comp
-L Device:R R4
-U 1 1 61ABA401
-P 2750 4000
-F 0 "R4" H 2820 4046 50  0000 L CNN
-F 1 "10kR" H 2820 3955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 4000 50  0001 C CNN
-F 3 "~" H 2750 4000 50  0001 C CNN
-	1    2750 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR06
-U 1 1 61E3FDFF
-P 2600 3650
-F 0 "#PWR06" H 2600 3500 50  0001 C CNN
-F 1 "+3.3V" H 2615 3823 50  0000 C CNN
-F 2 "" H 2600 3650 50  0001 C CNN
-F 3 "" H 2600 3650 50  0001 C CNN
-	1    2600 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 3850 2450 3700
-Wire Wire Line
-	2400 4600 2750 4600
-Wire Wire Line
-	2600 3650 2600 3700
-Wire Wire Line
-	2600 3700 2750 3700
-Connection ~ 2600 3700
-Wire Wire Line
-	2450 3700 2600 3700
-Wire Wire Line
-	2750 4150 2750 4600
 Wire Wire Line
 	1700 2500 1700 2650
 Wire Wire Line
@@ -766,87 +620,12 @@ Wire Notes Line
 	2800 600  2800 3000
 Wire Notes Line
 	600  3000 600  600 
-Connection ~ 1050 4400
-Wire Wire Line
-	1050 4400 1400 4400
-Text Label 1800 3700 3    50   ~ 0
-+VCC_RTC
-Wire Wire Line
-	1800 4100 1800 3700
-$Comp
-L power:+BATT #PWR04
-U 1 1 61D605BE
-P 1900 3950
-F 0 "#PWR04" H 1900 3800 50  0001 C CNN
-F 1 "+BATT" H 1915 4123 50  0000 C CNN
-F 2 "" H 1900 3950 50  0001 C CNN
-F 3 "" H 1900 3950 50  0001 C CNN
-	1    1900 3950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	650  4300 1350 4300
-Wire Wire Line
-	1350 4300 1350 4150
-Connection ~ 1350 4300
-Wire Wire Line
-	1350 4300 1400 4300
-NoConn ~ 1400 4700
-$Comp
-L Timer_RTC:DS3231M U2
-U 1 1 61AAC5E4
-P 1900 4500
-F 0 "U2" H 2100 4100 50  0000 C CNN
-F 1 "DS3231M" H 2100 4000 50  0000 C CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 1900 3900 50  0001 C CNN
-F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 2170 4550 50  0001 C CNN
-	1    1900 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1350 3850 1350 3700
-$Comp
-L Device:R R2
-U 1 1 61ABB593
-P 1350 4000
-F 0 "R2" H 1450 4050 50  0000 L CNN
-F 1 "4.7kR" H 1420 3955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1280 4000 50  0001 C CNN
-F 3 "~" H 1350 4000 50  0001 C CNN
-	1    1350 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 61AC2DFB
-P 1900 5100
-F 0 "#PWR05" H 1900 4850 50  0001 C CNN
-F 1 "GND" H 1905 4927 50  0000 C CNN
-F 2 "" H 1900 5100 50  0001 C CNN
-F 3 "" H 1900 5100 50  0001 C CNN
-	1    1900 5100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 4900 1900 5100
-Wire Notes Line
-	600  3100 600  5400
-Wire Notes Line
-	600  5400 3050 5400
-Wire Notes Line
-	3050 5400 3050 3100
-Wire Notes Line
-	3050 3100 600  3100
 Wire Notes Line
 	7050 600  8950 600 
 Wire Notes Line
 	8950 600  8950 2100
 Wire Notes Line
 	9050 2800 9050 3900
-Wire Notes Line
-	9050 4950 11150 4950
-Wire Notes Line
-	11150 3950 9050 3950
 Wire Notes Line
 	7050 2100 7050 600 
 Wire Notes Line
@@ -1309,8 +1088,6 @@ Wire Wire Line
 Wire Wire Line
 	8400 1350 8800 1350
 Wire Wire Line
-	1900 3950 1900 4100
-Wire Wire Line
 	3600 3100 3750 3100
 $Comp
 L Device:C_Small C6
@@ -1506,12 +1283,8 @@ Wire Notes Line
 	6950 3450 8950 3450
 Text Notes 7550 3650 0    91   ~ 0
 Power Supply 
-Wire Notes Line
-	9050 4950 9050 3950
-Wire Notes Line
-	11150 4950 11150 3950
 $Comp
-L STM32L4P5RET6:STM32L4P5RET6 U3
+L telemetria_receiver_2022-rescue:STM32L4P5RET6-STM32L4P5RET6 U3
 U 1 1 61B21933
 P 5350 3300
 F 0 "U3" H 5850 1400 50  0000 C CNN
@@ -1619,24 +1392,6 @@ Wire Wire Line
 Connection ~ 5150 1350
 Wire Wire Line
 	5150 1350 5150 1500
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 620A61BB
-P 10350 4850
-F 0 "#FLG0103" H 10350 4925 50  0001 C CNN
-F 1 "PWR_FLAG" V 10350 4978 50  0000 L CNN
-F 2 "" H 10350 4850 50  0001 C CNN
-F 3 "~" H 10350 4850 50  0001 C CNN
-	1    10350 4850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10200 4850 10200 4550
-Wire Wire Line
-	10200 4850 10350 4850
-Connection ~ 10200 4550
-Wire Wire Line
-	10200 4550 10250 4550
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 620BAA9F

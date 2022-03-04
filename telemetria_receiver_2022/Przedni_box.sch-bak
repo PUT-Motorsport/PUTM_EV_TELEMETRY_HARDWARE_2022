@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:telemetria_receiver_2022-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -86,8 +87,6 @@ Wire Wire Line
 Wire Wire Line
 	3500 4900 3250 4900
 Wire Wire Line
-	3500 5100 3250 5100
-Wire Wire Line
 	3500 5200 3250 5200
 Wire Wire Line
 	4000 4300 4250 4300
@@ -104,8 +103,6 @@ Wire Wire Line
 Wire Wire Line
 	4000 4900 4250 4900
 Wire Wire Line
-	4000 5100 4250 5100
-Wire Wire Line
 	4000 5200 4250 5200
 Text Label 3250 4400 0    50   ~ 0
 GND
@@ -113,8 +110,6 @@ Text Label 3250 4500 0    50   ~ 0
 CAN-H
 Text Label 3250 4600 0    50   ~ 0
 CAN-L
-Text Label 4250 5100 2    50   ~ 0
-+5V
 Text Label 4250 5200 2    50   ~ 0
 GND
 Text Label 4250 4300 2    50   ~ 0
@@ -125,8 +120,6 @@ Text Label 4250 4500 2    50   ~ 0
 +24F3
 Text Label 4250 4600 2    50   ~ 0
 GND
-Text Label 3250 5100 0    50   ~ 0
-+5V
 Text Label 3250 5200 0    50   ~ 0
 GND
 Wire Wire Line
@@ -421,8 +414,8 @@ L power:+5V #PWR?
 U 1 1 620EBD67
 P 2800 4200
 AR Path="/620EBD67" Ref="#PWR?"  Part="1" 
-AR Path="/61E11B21/620EBD67" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2800 4050 50  0001 C CNN
+AR Path="/61E11B21/620EBD67" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 2800 4050 50  0001 C CNN
 F 1 "+5V" H 2815 4373 50  0000 C CNN
 F 2 "" H 2800 4200 50  0001 C CNN
 F 3 "" H 2800 4200 50  0001 C CNN
@@ -434,10 +427,10 @@ Wire Wire Line
 Wire Wire Line
 	2800 4200 2800 4300
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0106
 U 1 1 620F3B12
 P 2750 4300
-F 0 "#FLG?" H 2750 4375 50  0001 C CNN
+F 0 "#FLG0106" H 2750 4375 50  0001 C CNN
 F 1 "PWR_FLAG" V 2750 4427 50  0000 L CNN
 F 2 "" H 2750 4300 50  0001 C CNN
 F 3 "~" H 2750 4300 50  0001 C CNN
@@ -447,4 +440,34 @@ $EndComp
 Wire Wire Line
 	2750 4300 2800 4300
 Connection ~ 2800 4300
+$Comp
+L power:+5V #PWR?
+U 1 1 6210232A
+P 3250 5100
+AR Path="/6210232A" Ref="#PWR?"  Part="1" 
+AR Path="/61E11B21/6210232A" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 3250 4950 50  0001 C CNN
+F 1 "+5V" H 3265 5273 50  0000 C CNN
+F 2 "" H 3250 5100 50  0001 C CNN
+F 3 "" H 3250 5100 50  0001 C CNN
+	1    3250 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6211758F
+P 4250 5100
+AR Path="/6211758F" Ref="#PWR?"  Part="1" 
+AR Path="/61E11B21/6211758F" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 4250 4950 50  0001 C CNN
+F 1 "+5V" H 4265 5273 50  0000 C CNN
+F 2 "" H 4250 5100 50  0001 C CNN
+F 3 "" H 4250 5100 50  0001 C CNN
+	1    4250 5100
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3250 5100 3500 5100
+Wire Wire Line
+	4000 5100 4250 5100
 $EndSCHEMATC
